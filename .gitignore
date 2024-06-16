@@ -1,0 +1,22 @@
+# Ignorar node_modules en la carpeta Servidor
+Servidor/node_modules/
+
+# Ignorar archivos de entorno
+Servidor/.env
+
+# Ignorar archivos de logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorar las carpetas de construcción
+Servidor/dist/
+Servidor/build/
+
+# Ignorar las dependencias locales
+.DS_Store
+
+# Ignorar archivos temporales de sistemas operativos
+Thumbs.db
