@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">{{ modoEdicion ? 'Editar Raza' : 'Crear Nueva Raza' }}</h2>
+          <form (ngSubmit)="guardarRaza()">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="raza.nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción:</label>
+              <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="raza.descripcion" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="planeta_origen" class="form-label">Planeta de Origen:</label>
+              <input type="text" class="form-control" id="planeta_origen" name="planeta_origen" [(ngModel)]="raza.planeta_origen" required>
+            </div>
+            <div class="mb-3">
+              <label for="estado" class="form-label">Estado:</label>
+              <select class="form-control" id="estado" name="estado" [(ngModel)]="raza.estado" required>
+                <option value="true">Activa</option>
+                <option value="false">Extinta</option>
+              </select>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">{{ modoEdicion ? 'Guardar Cambios' : 'Crear Raza' }}</button>
+              <button type="button" class="btn btn-danger ms-2" [routerLink]="['/razas']">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

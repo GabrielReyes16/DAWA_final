@@ -15,6 +15,11 @@ const RazaSchema = mongoose.Schema({
         type: String,
         required: false,
         trim: true
+    },
+    estado: {
+        type: Boolean,
+        default: true
+
     }
 });
 

@@ -1,8 +1,10 @@
-# Ignorar node_modules en la carpeta Servidor
+# Ignorar node_modules del Servidor y del Frontend
 Servidor/node_modules/
+Frontend/node_modules/
 
 # Ignorar archivos de entorno
 Servidor/.env
+Frontend/.env
 
 # Ignorar archivos de logs
 logs/
@@ -14,6 +16,8 @@ yarn-error.log*
 # Ignorar las carpetas de construcción
 Servidor/dist/
 Servidor/build/
+Frontend/build/
+Frontend/dist/
 
 # Ignorar las dependencias locales
 .DS_Store
