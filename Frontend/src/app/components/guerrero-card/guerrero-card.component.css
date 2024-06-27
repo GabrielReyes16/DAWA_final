@@ -1,0 +1,31 @@
+/* src/app/components/guerrero-card/guerrero-card.component.css */
+
+/* Add any custom styles here */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-weight: 600;
+  }
+  

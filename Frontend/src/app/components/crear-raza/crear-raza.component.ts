@@ -9,7 +9,7 @@ import { Raza } from '../../models/raza';
   styleUrls: ['./crear-raza.component.css']
 })
 export class CrearRazaComponent implements OnInit {
-  raza: Raza = new Raza('', '', '', false); // Inicializa con valores vacíos o adecuados según tu modelo y estado
+  raza: Raza = new Raza('', '', '', ); // Inicializa con valores vacíos o adecuados según tu modelo y estado
 
   modoEdicion = false;
 

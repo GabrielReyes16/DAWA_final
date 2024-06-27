@@ -55,7 +55,6 @@ exports.modificarGuerrero = async (req, res) => {
         guerrero.raza = raza;
         guerrero.transformaciones = transformaciones;
         guerrero.foto = foto;
-        guerrero.tipo = tipo;
         guerrero.estado = estado;
 
         guerrero = await Guerrero.findOneAndUpdate({ _id: req.params.id }, guerrero, { new: true }).populate('raza').populate('transformaciones');

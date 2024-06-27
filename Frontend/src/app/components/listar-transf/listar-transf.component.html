@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-4">TRANSFORMACIONES</h2>
+            <div class="d-flex justify-content-center mb-3">
+              <button class="btn btn-success btn-lg" routerLink="/crear-transf">NUEVA TRANSFORMACION</button>
+            </div>
+            
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let transf of listTransf">
+                    <td>{{ transf.nombre }}</td>
+                    <td>{{ transf.descripcion }}</td>
+                    <td>
+                      <button class="btn btn-primary" [routerLink]="['/editar-transf', transf._id]">
+                        Editar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

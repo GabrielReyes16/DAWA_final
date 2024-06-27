@@ -27,7 +27,7 @@ exports.obtenerRazas = async (req, res) => {
 //modificar una raza
 exports.modificarRaza = async (req, res) => {
     try {
-        const { nombre, descripcion, planeta_origen } = req.body; // Extraer datos del cuerpo de la solicitud
+        const { nombre, descripcion, planeta_origen, estado } = req.body; // Extraer datos del cuerpo de la solicitud
         let raza = await Raza.findById(req.params.id); // Buscar la raza por su ID
 
         if (!raza) {
@@ -38,6 +38,7 @@ exports.modificarRaza = async (req, res) => {
         raza.nombre = nombre;
         raza.descripcion = descripcion;
         raza.planeta_origen = planeta_origen;
+        raza.estado = estado;
 
         // Guardar y devolver la raza actualizada
         raza = await Raza.findOneAndUpdate({ _id: req.params.id }, raza, { new: true });

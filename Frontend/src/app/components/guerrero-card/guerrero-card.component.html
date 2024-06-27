@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <div class="row">
+      <div *ngFor="let guerrero of guerreros" class="col-md-4 mb-4">
+          <div class="card h-100">
+              <img 
+                  class="card-img-top" 
+                  [src]="guerrero.foto" 
+                  alt="Foto de {{ guerrero.nombre }}" 
+                  (error)="onImageError(guerrero)">
+              <div class="card-body">
+                  <h5 class="card-title">{{ guerrero.nombre }}</h5>
+                  <p class="card-text">{{ guerrero.descripcion }}</p>
+                  <p class="card-text"><strong>Raza:</strong> {{ guerrero.raza.nombre }}</p>
+                  <div *ngIf="guerrero.transformaciones.length > 0">
+                      <strong>Transformaciones:</strong>
+                      <ul>
+                          <li *ngFor="let transformacion of guerrero.transformaciones">
+                              {{ transformacion.nombre }} - {{ transformacion.descripcion }}
+                          </li>
+                      </ul>
+                  </div>
+                  <p class="card-text"><strong>Estado:</strong> {{ guerrero.estado }}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
