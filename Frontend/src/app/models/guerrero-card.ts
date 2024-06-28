@@ -1,32 +1,32 @@
 // src/app/models/guerrero-card.model.ts
 
 export class GuerreroCard {
-    _id?: string;
-    nombre: string;
-    descripcion: string;
-    raza: Raza;
-    transformaciones: Transformacion[];
-    foto?: string;
-    estado: string;
-  
-    constructor(
-      nombre: string,
-      descripcion: string,
-      raza: Raza,
-      transformaciones: Transformacion[],
-      estado: string,
-      foto?: string,
-      _id?: string
-    ) {
-      this.nombre = nombre;
-      this.descripcion = descripcion;
-      this.raza = raza;
-      this.transformaciones = transformaciones;
-      this.estado = estado;
-      this.foto = foto;
-      this._id = _id;
-    }
+  _id?: string;
+  nombre: string;
+  descripcion: string;
+  raza: Raza;
+  transformaciones: Transformacion[];
+  foto?: string;
+  estado: string;
+
+  constructor(
+    nombre: string,
+    descripcion: string,
+    raza: Raza,
+    transformaciones: Transformacion[],
+    estado: string,
+    foto?: string,
+    _id?: string
+  ) {
+    this.nombre = nombre;
+    this.descripcion = descripcion;
+    this.raza = raza;
+    this.transformaciones = transformaciones;
+    this.estado = estado;
+    this.foto = foto;
+    this._id = _id;
   }
+}
   
   export class Raza {
     _id?: string;

@@ -13,8 +13,7 @@
         },
         raza: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Raza', // Referencia al modelo de Raza
-            required: true
+            ref: 'Raza'
         },
         transformaciones: [{
             type: mongoose.Schema.Types.ObjectId,
